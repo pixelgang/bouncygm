@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eventMenu</name>
+    <events>
+        <event-block disabled="1" sid="4983698119655645">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3055372747894099" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="8537246911501409">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="3296276739055941" type="animais">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">sorteio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="7812726493398234" type="System">
+                            <param id="0" name="Variable">total_na_mesa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="475244368332532" type="animais">
+                            <param id="0" name="Object">Particles</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3823774943486162" type="animais" />
+                        <action id="-10" name="Add to" sid="1914262437042281" type="System">
+                            <param id="0" name="Variable">points</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="1428640066655775">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8528536214102516" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="339399288143162" type="System">
+                            <param id="0" name="Variable">points</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8655507567854807">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1232101887040054" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Preload interstitial" sid="3387988791838875" type="AdmobAds" />
+                <action id="-3" name="Create object" sid="4275139757027783" type="System">
+                    <param id="0" name="Object to create">animais</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">-111</param>
+                    <param id="3" name="Y">-377</param>
+                </action>
+                <action id="-16" name="Wait" sid="4100188056758735" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="4190808774640769" type="System">
+                    <param id="0" name="Object to create">animais</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">-111</param>
+                    <param id="3" name="Y">-377</param>
+                </action>
+                <action id="-16" name="Wait" sid="6801561806282269" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="9508966602484199" type="System">
+                    <param id="0" name="Object to create">animais</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">-111</param>
+                    <param id="3" name="Y">-377</param>
+                </action>
+                <action id="-16" name="Wait" sid="4317646098776806" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-3" name="Create object" sid="8079044359195771" type="System">
+                    <param id="0" name="Object to create">animais</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">-111</param>
+                    <param id="3" name="Y">-377</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3456319747928031">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3762675740309184" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8607187932350051" type="play">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="2558636740403303" type="System">
+                    <param id="0" name="Seconds">3.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9859212018627642" type="play">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3620386456618841">
+            <conditions>
+                <condition id="3" name="On touched object" sid="8781910376903779" type="Touch">
+                    <param id="0" name="Object">play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8698533529938854" type="System">
+                    <param id="0" name="Layout">game</param>
+                </action>
+                <action id="4" name="Show interstitial" sid="1939753030197153" type="AdmobAds" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
